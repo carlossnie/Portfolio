@@ -3,32 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="../styles/styleIndex.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>WELCOME TO THE LIBRARY</h1>
-        </div>
-        <div class="content">
-            <div class="content__left">
-                <h2>LOGIN</h2>
-                <form action="login.php" method="POST">
-                    <input type="text" name="username" placeholder="Username">
-                    <input type="password" name="password" placeholder="Password">
-                    <button type="submit">Login</button>
-                </form>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section section--about" id="about">
+            <h2 class="section__title">About</h2>
+            <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates.</p>
+        </section>
+        <section class="section section--projects" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="../images/project1.jpg" alt="Project 1" class="project__image">
+                    <h3 class="project__title">Project 1</h3>
+                    <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates.</p>
+                </div>
+                <div class="project">
+                    <img src="../images/project2.jpg" alt="Project 2" class="project__image">
+                    <h3 class="project__title">Project 2</h3>
+                    <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates.</p>
+                </div>
+                <div class="project">
+                    <img src="../images/project3.jpg" alt="Project 3" class="project__image">
+                    <h3 class="project__title">Project 3</h3>
+                    <p class="project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptates.</p>
+                </div>
             </div>
-            <div class="content__right">
-                <h2>REGISTER</h2>
-                <form action="register.php" method="POST">
-                    <input type="text" name="username" placeholder="Username">
-                    <input type="password" name="password" placeholder="Password">
-                    <button type="submit">Register</button>
-                </form>
-            </div>
-        </div>
-    </div>
+        </section>
+        <section class="section section--contact" id="contact">
+            <h2 class="section__title">Contact</h2>
+            <form action="#" class="form">
+                <div class="form__group">
+                    <label for="name" class="form__label">Name</label>
+                    <input type="text" id="name" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="message" class="form __label">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form__textarea" required></textarea>
+                </div>
+                <button class="form__button">Send</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
