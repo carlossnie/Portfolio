@@ -1,0 +1,51 @@
+/* Add to your CSS */
+.game-container {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 20px 0;
+    
+}
+
+.cell {
+    background: white;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid #180a3b;
+}
+
+.cell:hover {
+    background: var(--light-gray);
+}
+
+.game-status {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: black;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    background: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.reset-button:hover {
+    background: var(--primary-color);
+}
