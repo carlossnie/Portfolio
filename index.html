@@ -27,7 +27,12 @@
                 <div class="project">
                     <img src="../images/project1.jpg" alt="Project 1" class="project__image">
                     <h3 class="project__title">Project 1</h3>
-                    <button type="button" class="project__button" onclick="window.location.href='Pages/tictactoe.html'">Click me!</button>
+                    <button type="button" class="project__button" onclick="location.href='Pages/tictactoe.html'">Click me!</button>
+                    <script>
+                        document.getElementById("miBoton").addEventListener("click", function () {
+                          window.location.href = "pagina.html";
+                        });
+                      </script>
                 </div>
                 <div class="project">
                     <img src="../images/project2.jpg" alt="Project 2" class="project__image">
@@ -43,14 +48,6 @@
         </section>
         <section class="section section--contact" id="contact">
             <h2 class="section__title">Contact</h2>
-            <?php
-            session_start();
-            if(isset($_SESSION['message'])) {
-                echo "<p class='" . $_SESSION['message_type'] . "'>" . $_SESSION['message'] . "</p>";
-                unset($_SESSION['message']);
-                unset($_SESSION['message_type']);
-            }
-            ?>
             <form action="contact.php" class="form" method="post">
                 <div class="form__group">
                     <label for="sender" class="form__label">Name</label>
